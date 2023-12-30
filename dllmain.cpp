@@ -7,6 +7,7 @@ typedef unsigned long long u64;
 
 typedef NTSTATUS(NTAPI* pNtQueryInformationThread)(HANDLE ThreadHandle, unsigned int ThreadInformationClass, PVOID ThreadInformation, ULONG ThreadInformationLength, PULONG ReturnLength);
 
+// CImmersiveWatermark::_LaunchKernelThread | first if-check (we patch it to always fail)
 BYTE pattern[] = { 0x0F, 0x85 ,0x83 ,0x00 ,0x00 ,0x00 ,0x48 ,0x21 ,0x5C };
 const char* mask = "xxxxxxxxx";
 
