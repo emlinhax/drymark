@@ -74,12 +74,12 @@ bool patch_kmthreadstarter()
 
     DWORD v0;
     VirtualProtect((void*)pCImmersiveWatermark___LaunchKernelThread, 6, PAGE_EXECUTE_READWRITE, &v0);
-    *(char*)(pCImmersiveWatermark___LaunchKernelThread + 0x0) = 0xE9;
-    *(char*)(pCImmersiveWatermark___LaunchKernelThread + 0x1) = 0x84;
-    *(char*)(pCImmersiveWatermark___LaunchKernelThread + 0x2) = 0x00;
-    *(char*)(pCImmersiveWatermark___LaunchKernelThread + 0x3) = 0x00;
-    *(char*)(pCImmersiveWatermark___LaunchKernelThread + 0x4) = 0x00;
-    *(char*)(pCImmersiveWatermark___LaunchKernelThread + 0x5) = 0x90;
+    *(char*)(pCImmersiveWatermark___LaunchKernelThread + 0x0) = 0xE9; // jmp
+    *(char*)(pCImmersiveWatermark___LaunchKernelThread + 0x1) = 0x84; // offset
+    *(char*)(pCImmersiveWatermark___LaunchKernelThread + 0x2) = 0x00; // ...
+    *(char*)(pCImmersiveWatermark___LaunchKernelThread + 0x3) = 0x00; // ...
+    *(char*)(pCImmersiveWatermark___LaunchKernelThread + 0x4) = 0x00; // ...
+    *(char*)(pCImmersiveWatermark___LaunchKernelThread + 0x5) = 0x90; // nop
     VirtualProtect((void*)pCImmersiveWatermark___LaunchKernelThread, 6, v0, &v0);
 
     return true;
