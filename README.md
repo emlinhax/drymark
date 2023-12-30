@@ -1,5 +1,5 @@
 # drymark
-i got extremely bored and decided to reverse engineer how the windows watermark works.
+i got extremely bored and decided to reverse engineer how the windows watermark works. \
 this project is the result of that. have fun!
 
 # how to use
